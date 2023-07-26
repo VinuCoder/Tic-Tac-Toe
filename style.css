@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url("background.jpg") no-repeat;
+    background-size: 100vw 100vh;
+}
+nav{
+    background-color: rgb(13, 28, 56);
+    height: 6vw;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    font-size: 4vw;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+}
+nav ul{
+    text-decoration: none;
+}
+nav ul li{
+    list-style: none;
+    text-shadow: 6px 1px 4px goldenrod
+}
+
+.container{
+    background: url("background.jpg") no-repeat;
+    background-size: 100vw 100vh;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+.gamecontainer{
+    padding-top: 5vh;
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    font-size: 7vw;
+    cursor: pointer;
+    transition: all 0.8s ease;
+    border-radius: 8px;
+}
+
+
+.infocontainer{
+    padding-top: 5vh;
+    margin-left: 55px;
+    font-family: 'Roboto Slab', serif;
+}
+.imgbox img{
+    margin-top: 20px;
+    width: 0px;
+    transition: width 1s ease-in-out;
+    border-radius: 15px;
+}
+.infocontainer h1{
+    font-size: 3.3vw;
+}
+.gameinfo{
+   display: flex; 
+   flex-direction: column;
+}
+
+.info{
+    font-size: 1.8rem;
+    margin-top: 2vh;
+    padding-bottom: 12px;
+}
+#reset{
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-top: 10px;
+    width: 30%;
+    padding: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color:beige ;
+    transition: all ease 0.5s;
+}
+#reset:hover{
+    box-shadow: 8px 5px 2px black;
+    background-color: rgb(134, 132, 136);
+    color: white;
+}
+
+
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.br-0{
+    border-right: 0;
+}
+
+@media screen and (max-width: 800px) {
+    .container{
+        flex-wrap: wrap;
+    }
+    .infocontainer{
+        margin-left: 25%;
+    }
+    .gamecontainer{
+        grid-template-rows: repeat(3,15vw);
+        grid-template-columns: repeat(3,20vw);
+    }
+    .imgbox img{
+        width: 80%;
+    }
+    nav{
+        font-size: 2.7rem;
+        height: 11vh;
+    }
+    #reset:hover{
+        box-shadow: 5px 5px 2px black;
+        background-color: rgb(134, 132, 136);
+        color: white;
+    }
+  }
